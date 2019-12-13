@@ -1,7 +1,7 @@
 <template>
 <div>
 <h2>To-do List:</h2>
-<input type="text" v-model="todo.text">
+<input type="text" v-model="todo.text" v-on:keyup.enter="createTodo">
 <button v-on:click="createTodo">Create Todo</button>
 <ul>
     <li v-for="(todo, index) in todos" v-on:click="completeTodo(todo)">
